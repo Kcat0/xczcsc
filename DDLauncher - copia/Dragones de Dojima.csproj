@@ -1,0 +1,135 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFrameworks>net6.0-windows</TargetFrameworks>
+    <RootNamespace>Dragones_de_Dojima</RootNamespace>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StartupObject>Dragones_de_Dojima.Program</StartupObject>
+    <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
+    <Description>Launcher para facilitar la descarga de las fantraducciones del videojuego Yakuza.</Description>
+    <NeutralLanguage>es-419</NeutralLanguage>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <ApplicationIcon>LOGO - ICONO.ico</ApplicationIcon>
+    <PackageIcon>128.png</PackageIcon>
+</PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <Optimize>False</Optimize>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>full</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0-windows|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0-windows|AnyCPU'">
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\db.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\auth\a01_0010.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\auth\a01_0020.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\auth\a02_0040.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\auth\a03_0010.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\auth\a91_0010.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\auth\a91_0020.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\auth\a99_999_c.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\db.par.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\Dragones_de_Dojima.Resources.db.par.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\font\en\yakuza.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\font\en\yakuza_italic.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\hact_lexus2\a61430_clan_btl_win.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\hact_lexus2\m70700_cab_opening02.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\movie\battle.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\movie\c02_0043.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\movie\c02_0046_uturi.xdelta" />
+    <None Remove="Resources\files\k2\comunes\data\movie\c02_0060.xdelta" />
+    <None Remove="Resources\files\k2\comunes\toylets\fs_en.xdelta" />
+    <None Remove="Resources\files\k2\gamepass\data\asset.xdelta" />
+    <None Remove="Resources\files\k2\gamepass\data\db.xdelta" />
+    <None Remove="Resources\files\k2\gamepass\data\talk_lexus2.xdelta" />
+    <None Remove="Resources\files\k2\gamepass\data\ui.xdelta" />
+    <None Remove="Resources\files\k2\steamygog\data\asset.xdelta" />
+    <None Remove="Resources\files\k2\steamygog\data\db.xdelta" />
+    <None Remove="Resources\files\k2\steamygog\data\ui.xdelta" />
+    <None Remove="Resources\files\k2\steam\data\talk_lexus2.xdelta" />
+    <None Remove="Resources\files\k2\steam\YakuzaKiwami2.xdelta" />
+    <None Remove="Resources\xdelta3.exe" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="LOGO - ICONO.ico" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\auth\a99_999_c.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\hact_lexus2\a61430_clan_btl_win.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\hact_lexus2\m70700_cab_opening02.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\movie\c02_0043.xdelta" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\auth\a01_0010.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\auth\a01_0020.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\auth\a02_0040.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\auth\a03_0010.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\auth\a91_0010.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\auth\a91_0020.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\font\en\yakuza.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\font\en\yakuza_italic.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\movie\battle.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\movie\c02_0046_uturi.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\data\movie\c02_0060.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\comunes\toylets\fs_en.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\gamepass\data\asset.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\gamepass\data\db.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\gamepass\data\talk_lexus2.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\gamepass\data\ui.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\steamygog\data\asset.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\steamygog\data\db.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\steamygog\data\ui.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\steam\data\talk_lexus2.xdelta" />
+    <EmbeddedResource Include="Resources\files\k2\steam\YakuzaKiwami2.xdelta" />
+    <EmbeddedResource Include="Resources\xdelta3.exe" />
+  </ItemGroup>
+
+<ItemGroup>
+    <PackageReference Include="FirebaseDatabase.net" Version="4.2.0" />
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.3179.45" />
+    <PackageReference Include="VCDiff" Version="4.0.1" />
+</ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Instrucciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Y3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\files\k2\gog\data\" />
+  </ItemGroup>
+
+</Project>
